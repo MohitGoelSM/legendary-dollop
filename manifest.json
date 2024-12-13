@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Kite Watchlist Stock Data",
+    "version": "1.0",
+    "description": "Retrieve stock data from the Zerodha Kite watchlist.",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+      
+    },
+    "background": {
+      
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://kite.zerodha.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
